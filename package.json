@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "babel": {
     "presets": [
@@ -16,17 +18,19 @@
   "license": "ISC",
   "dependencies": {
     "react": "^15.6.1",
-    "react-dom": "^15.6.1"
+    "react-dom": "^15.6.1",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.4",
-    "html-webpack-plugin": "^2.29.0",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.4.0",
-    "webpack-dev-server": "^2.6.1"
-  }
+    "css-loader": "^2.0.0",
+    "html-webpack-plugin": "^4.0.0",
+    "style-loader": "^0.20.0",
+    "webpack": "^4.26.0",
+    "webpack-dev-server": "^4.0.0"
+  },
+  "snyk": true
 }
